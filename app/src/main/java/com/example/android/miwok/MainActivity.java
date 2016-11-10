@@ -19,6 +19,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,10 +29,48 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        TextView Numbers = (TextView) findViewById(R.id.numbers);
+        TextView Colors = (TextView) findViewById(R.id.colors);
+        TextView Family = (TextView) findViewById(R.id.family);
+        TextView Phrase = (TextView) findViewById(R.id.phrases);
+
+        Numbers.setOnClickListener(mNumbersListener);
+        Colors.setOnClickListener(mColorsListener);
+        Family.setOnClickListener(mFamilyListener);
+        Phrase.setOnClickListener(mPhraseListener);
     }
 
-    public void openNumbersList(View view){
-        Intent intent = new Intent(this, NumbersActivity.class );
-        startActivity(intent);
-    }
+    private View.OnClickListener mNumbersListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, NumbersActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener mColorsListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, NumbersActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener mFamilyListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, NumbersActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener mPhraseListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, NumbersActivity.class);
+            startActivity(intent);
+        }
+    };
+
 }
